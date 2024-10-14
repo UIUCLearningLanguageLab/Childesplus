@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CHAT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.talkbank.org/ns/talkbank"
+      xsi:schemaLocation="http://www.talkbank.org/ns/talkbank https://talkbank.org/software/talkbank.xsd"
+            DesignType="cross"
+            ActivityType="toyplay"
+            GroupType="TD"
+      PID="11312/c-00015267-1"
+      Version="3.0.0"
+      Lang="eng"
+      Options="multi"
+      Corpus="Bates"
+      >
+  <Participants>
+    <participant
+      id="MOT"
+      role="Mother"
+      language="eng"
+      sex="female"
+
+    />
+    <participant
+      id="CHI"
+      role="Target_Child"
+      language="eng"
+      age="P2Y04M"
+      sex="male"
+      group="TD"
+      SES="MC"
+
+    />
+  </Participants>
+  <comment type="Types">cross, toyplay, TD</comment>
+  <u who="MOT" uID="u0">
+    <w>look<mor type="mor"><mw><pos><c>verb</c></pos><stem>look</stem><mk type="sfx">Fin</mk><mk type="sfx">Imp</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="2" relation="ROOT"/></mor></w>
+    <pause symbolic-length="simple"></pause>
+    <w>look<mor type="mor"><mw><pos><c>noun</c></pos><stem>look</stem></mw><gra type="gra" index="2" head="1" relation="OBJ"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="3" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;aft&gt; it falls . unstacks nesting cups</a>
+    <a type="paralinguistics">spoken softly</a>
+  </u>
+  <u who="MOT" uID="u1">
+    <w>where<mor type="mor"><mw><pos><c>adv</c></pos><stem>where</stem></mw><gra type="gra" index="1" head="3" relation="ADVMOD"/></mor></w>
+    <w>they<mor type="mor"><mw><pos><c>pron</c></pos><stem>they</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">P3</mk></mw><gra type="gra" index="2" head="3" relation="NSUBJ"/></mor></w>
+    <w>going<mor type="mor"><mw><pos><c>verb</c></pos><stem>go</stem><mk type="sfx">Ger</mk><mk type="sfx">S</mk></mw><gra type="gra" index="3" head="3" relation="ROOT"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="4" head="3" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="MOT" uID="u2">
+    <w>they<mor type="mor"><mw><pos><c>pron</c></pos><stem>they</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">P3</mk></mw><gra type="gra" index="1" head="2" relation="NSUBJ"/></mor></w>
+    <w>go<mor type="mor"><mw><pos><c>verb</c></pos><stem>go</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">P3</mk></mw><gra type="gra" index="2" head="3" relation="ROOT"/></mor></w>
+    <w>byebye<mor type="mor"><mw><pos><c>noun</c></pos><stem>byebye</stem></mw><gra type="gra" index="3" head="2" relation="OBJ"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="4" head="2" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="CHI" uID="u3">
+    <w>hm<p type="drawl"/><mor type="mor"><mw><pos><c>intj</c></pos><stem>hm</stem></mw><gra type="gra" index="1" head="2" relation="DISCOURSE"/></mor></w>
+    <w>take<mor type="mor"><mw><pos><c>verb</c></pos><stem>take</stem><mk type="sfx">Fin</mk><mk type="sfx">Imp</mk><mk type="sfx">S</mk></mw><gra type="gra" index="2" head="3" relation="ROOT"/></mor></w>
+    <g><w>dog<mor type="mor"><mw><pos><c>noun</c></pos><stem>dog</stem></mw><gra type="gra" index="3" head="2" relation="OBJ"/></mor></w><error/></g>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="4" head="2" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;bef&gt; attempts to put man in car . drops man . picks up and puts in car . &lt;dur&gt; takes hands off car</a>
+  </u>
+  <u who="CHI" uID="u4">
+    <w>dog<mor type="mor"><mw><pos><c>noun</c></pos><stem>dog</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;dur&gt; takes hands off car</a>
+    <a type="extension" flavor="pho">&lt;1w&gt; gOg</a>
+  </u>
+  <u who="MOT" uID="u5">
+    <w>what<mor type="mor"><mw><pos><c>pron</c></pos><stem>what</stem><mk type="sfx">Int</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="MOT" uID="u6">
+    <w>oh<mor type="mor"><mw><pos><c>intj</c></pos><stem>oh</stem></mw><gra type="gra" index="1" head="3" relation="DISCOURSE"/></mor></w>
+    <pause symbolic-length="simple"></pause>
+    <w>you<mor type="mor"><mw><pos><c>pron</c></pos><stem>you</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="2" head="3" relation="NSUBJ"/></mor></w>
+    <w>closing<mor type="mor"><mw><pos><c>verb</c></pos><stem>close</stem><mk type="sfx">Ger</mk><mk type="sfx">S</mk></mw><gra type="gra" index="3" head="6" relation="ROOT"/></mor></w>
+    <w>all<mor type="mor"><mw><pos><c>det</c></pos><stem>all</stem><mk type="sfx">Def</mk></mw><gra type="gra" index="4" head="6" relation="DET-PREDET"/></mor></w>
+    <w>the<mor type="mor"><mw><pos><c>det</c></pos><stem>the</stem><mk type="sfx">Def</mk><mk type="sfx">Art</mk></mw><gra type="gra" index="5" head="6" relation="DET"/></mor></w>
+    <w>doors<mor type="mor"><mw><pos><c>noun</c></pos><stem>door</stem><mk type="sfx">Plur</mk></mw><gra type="gra" index="6" head="3" relation="OBJ"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="7" head="3" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="MOT" uID="u7">
+    <w>okay<mor type="mor"><mw><pos><c>intj</c></pos><stem>okay</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="CHI" uID="u8">
+    <e><action/></e>
+    <t type="p"></t>
+
+    <a type="actions">shuts dollhouse doors</a>
+  </u>
+  <u who="MOT" uID="u9">
+    <w>whoops<mor type="mor"><mw><pos><c>intj</c></pos><stem>whoops</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; dumps out shape box . shape box object rolls away</a>
+  </u>
+  <u who="MOT" uID="u10">
+    <w>can<mor type="mor"><mw><pos><c>aux</c></pos><stem>can</stem><mk type="sfx">Fin</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="3" relation="AUX"/></mor></w>
+    <w>you<mor type="mor"><mw><pos><c>pron</c></pos><stem>you</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="2" head="3" relation="NSUBJ"/></mor></w>
+    <w>get<mor type="mor"><mw><pos><c>verb</c></pos><stem>get</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="3" head="4" relation="ROOT"/></mor></w>
+    <w>that<mor type="mor"><mw><pos><c>pron</c></pos><stem>that</stem><mk type="sfx">Dem</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="4" head="3" relation="OBJ"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="5" head="3" relation="PUNCT"/></mor></t>
+
+    <a type="gesture">&lt;1w&gt; points to shape box .</a>
+  </u>
+  <u who="MOT" uID="u11">
+    <w>see<mor type="mor"><mw><pos><c>verb</c></pos><stem>see</stem><mk type="sfx">Fin</mk><mk type="sfx">Imp</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="6" relation="ROOT"/></mor></w>
+    <w>it<mor type="mor"><mw><pos><c>pron</c></pos><stem>it</stem><mk type="sfx">Prs</mk><mk type="sfx">Acc</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="2" head="1" relation="OBJ"/></mor></w>
+    <w>rolled<mor type="mor"><mw><pos><c>verb</c></pos><stem>roll</stem><mk type="sfx">Part</mk><mk type="sfx">Past</mk><mk type="sfx">S</mk></mw><gra type="gra" index="3" head="1" relation="XCOMP"/></mor></w>
+    <w>way<mor type="mor"><mw><pos><c>adv</c></pos><stem>way</stem></mw><gra type="gra" index="4" head="6" relation="ADVMOD"/></mor></w>
+    <w>over<mor type="mor"><mw><pos><c>adp</c></pos><stem>over</stem></mw><gra type="gra" index="5" head="6" relation="CASE"/></mor></w>
+    <w>there<mor type="mor"><mw><pos><c>adv</c></pos><stem>there</stem></mw><gra type="gra" index="6" head="3" relation="ADVMOD"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="7" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="gesture">&lt;1w&gt; points again</a>
+  </u>
+  <u who="CHI" uID="u12">
+    <w untranscribed="unintelligible-with-pho">yyy</w>
+    <w>can't<mor type="mor"><mw><pos><c>aux</c></pos><stem>can</stem><mk type="sfx">Fin</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="2" relation="ROOT"/><mor-post><mw><pos><c>part</c></pos><stem>not</stem></mw><gra type="gra" index="2" head="1" relation="ADVMOD"/></mor-post></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="3" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="gesture">points to shape box</a>
+    <a type="extension" flavor="pho">&lt;1w&gt; 6h</a>
+  </u>
+  <u who="MOT" uID="u13">
+    <w>oh<mor type="mor"><mw><pos><c>intj</c></pos><stem>oh</stem></mw><gra type="gra" index="1" head="2" relation="ROOT"/></mor></w>
+    <pause symbolic-length="simple"></pause>
+    <w>okay<mor type="mor"><mw><pos><c>intj</c></pos><stem>okay</stem></mw><gra type="gra" index="2" head="1" relation="DISCOURSE"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="3" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">shuts shape box lid</a>
+  </u>
+  <u who="CHI" uID="u14">
+    <w>me<mor type="mor"><mw><pos><c>pron</c></pos><stem>I</stem><mk type="sfx">Prs</mk><mk type="sfx">Acc</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="1" head="2" relation="NSUBJ"/></mor></w>
+    <g><w>pick<mor type="mor"><mw><pos><c>verb</c></pos><stem>pick</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="2" head="2" relation="ROOT"/></mor></w><error/></g>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="3" head="2" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;aft&gt; retrieves shape box object and puts in shape box</a>
+  </u>
+  <u who="MOT" uID="u15">
+    <w>thank_you<mor type="mor"><mw><pos><c>noun</c></pos><stem>thankyou</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; gathers objects .</a>
+  </u>
+  <u who="MOT" uID="u16">
+    <w>here's<mor type="mor"><mw><pos><c>adv</c></pos><stem>here</stem></mw><gra type="gra" index="1" head="4" relation="ROOT"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="2" head="1" relation="COP"/></mor-post></mor></w>
+    <w>another<mor type="mor"><mw><pos><c>det</c></pos><stem>another</stem><mk type="sfx">Def</mk></mw><gra type="gra" index="3" head="4" relation="DET"/></mor></w>
+    <w>one<mor type="mor"><mw><pos><c>noun</c></pos><stem>one</stem></mw><gra type="gra" index="4" head="1" relation="NSUBJ"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="5" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; holds shape box object out to Rick</a>
+  </u>
+  <u who="CHI" uID="u17">
+    <e><action/></e>
+    <t type="p"></t>
+
+    <a type="actions">takes shape box object and puts in shape box</a>
+  </u>
+  <u who="MOT" uID="u18">
+    <e><action/></e>
+    <t type="p"></t>
+
+    <a type="actions">gathers objects . picks up shape box object and holds out to Rick</a>
+  </u>
+  <u who="CHI" uID="u19">
+    <e><action/></e>
+    <t type="p"></t>
+
+    <a type="actions">takes object and puts in shape box</a>
+  </u>
+  <u who="MOT" uID="u20">
+    <e><action/></e>
+    <t type="p"></t>
+
+    <a type="actions">picks up shape box object and holds out to Rick</a>
+  </u>
+  <u who="CHI" uID="u21">
+    <e><action/></e>
+    <t type="p"></t>
+
+    <a type="actions">takes object and attempts to put in shape box</a>
+  </u>
+  <u who="MOT" uID="u22">
+    <w>picks<mor type="mor"><mw><pos><c>verb</c></pos><stem>pick</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="1" head="7" relation="ROOT"/></mor></w>
+    <w>up<mor type="mor"><mw><pos><c>adp</c></pos><stem>up</stem></mw><gra type="gra" index="2" head="1" relation="COMPOUND-PRT"/></mor></w>
+    <w>shape<mor type="mor"><mw><pos><c>noun</c></pos><stem>shape</stem></mw><gra type="gra" index="3" head="4" relation="COMPOUND"/></mor></w>
+    <w>box<mor type="mor"><mw><pos><c>noun</c></pos><stem>box</stem></mw><gra type="gra" index="4" head="5" relation="COMPOUND"/></mor></w>
+    <w>object<mor type="mor"><mw><pos><c>noun</c></pos><stem>object</stem></mw><gra type="gra" index="5" head="1" relation="OBJ"/></mor></w>
+    <w>and<mor type="mor"><mw><pos><c>cconj</c></pos><stem>and</stem></mw><gra type="gra" index="6" head="7" relation="CC"/></mor></w>
+    <w>holds<mor type="mor"><mw><pos><c>verb</c></pos><stem>hold</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="7" head="1" relation="CONJ"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="8" head="1" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="CHI" uID="u23">
+    <w>where<mor type="mor"><mw><pos><c>adv</c></pos><stem>where</stem></mw><gra type="gra" index="1" head="2" relation="ADVMOD"/></mor></w>
+    <g><w>go<mor type="mor"><mw><pos><c>verb</c></pos><stem>go</stem><mk type="sfx">Fin</mk><mk type="sfx">Imp</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="2" head="2" relation="ROOT"/></mor></w><error/></g>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="3" head="2" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;aft&gt; puts object in shape box</a>
+  </u>
+  <u who="MOT" uID="u24">
+    <w>which<mor type="mor"><mw><pos><c>det</c></pos><stem>which</stem><mk type="sfx">Def</mk><mk type="sfx">Int</mk></mw><gra type="gra" index="1" head="2" relation="DET"/></mor></w>
+    <w>one<mor type="mor"><mw><pos><c>num</c></pos><stem>one</stem></mw><gra type="gra" index="2" head="2" relation="ROOT"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="3" head="2" relation="PUNCT"/></mor></t>
+
+    <a type="explanation">Sandie comes in room and talks to Mother</a>
+    <a type="actions">picks up shape box objects and holds</a>
+  </u>
+  <u who="MOT" uID="u25">
+    <w>okay<mor type="mor"><mw><pos><c>intj</c></pos><stem>okay</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;aft&gt; pushes car back and forth . pushes car toward Rick and lets roll</a>
+  </u>
+  <u who="CHI" uID="u26">
+    <w>byebye<mor type="mor"><mw><pos><c>noun</c></pos><stem>Byebye</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">moves nesting cups for Mother . touches car and people</a>
+  </u>
+  <u who="MOT" uID="u27">
+    <w>here's<mor type="mor"><mw><pos><c>adv</c></pos><stem>here</stem></mw><gra type="gra" index="1" head="3" relation="ROOT"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="2" head="1" relation="COP"/></mor-post></mor></w>
+    <w>some<mor type="mor"><mw><pos><c>det</c></pos><stem>some</stem><mk type="sfx">Def</mk></mw><gra type="gra" index="3" head="1" relation="NSUBJ"/></mor></w>
+    <w untranscribed="unintelligible">xxx</w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="4" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; takes objects out of dollhouse .</a>
+  </u>
+  <u who="MOT" uID="u28">
+    <w>we<mor type="mor"><mw><pos><c>pron</c></pos><stem>we</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">P1</mk></mw><gra type="gra" index="1" head="3" relation="NSUBJ"/></mor></w>
+    <w>can<mor type="mor"><mw><pos><c>aux</c></pos><stem>can</stem><mk type="sfx">Fin</mk><mk type="sfx">S</mk></mw><gra type="gra" index="2" head="3" relation="AUX"/></mor></w>
+    <w>make<mor type="mor"><mw><pos><c>verb</c></pos><stem>make</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="3" head="7" relation="ROOT"/></mor></w>
+    <w>the<mor type="mor"><mw><pos><c>det</c></pos><stem>the</stem><mk type="sfx">Def</mk><mk type="sfx">Art</mk></mw><gra type="gra" index="4" head="5" relation="DET"/></mor></w>
+    <w>lady<mor type="mor"><mw><pos><c>noun</c></pos><stem>lady</stem></mw><gra type="gra" index="5" head="3" relation="OBJ"/></mor></w>
+    <w>lie<mor type="mor"><mw><pos><c>verb</c></pos><stem>lie</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="6" head="3" relation="XCOMP"/></mor></w>
+    <w>down<mor type="mor"><mw><pos><c>adv</c></pos><stem>down</stem></mw><gra type="gra" index="7" head="6" relation="ADVMOD"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="8" head="3" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; puts man in lawn chair and arranges it</a>
+  </u>
+  <u who="CHI" uID="u29">
+    <w>what's<mor type="mor"><mw><pos><c>pron</c></pos><stem>what</stem><mk type="sfx">Int</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="1" head="3" relation="ROOT"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="2" head="3" relation="COP"/></mor-post></mor></w>
+    <g><w><shortening>th</shortening>em<mor type="mor"><mw><pos><c>pron</c></pos><stem>they</stem><mk type="sfx">Prs</mk><mk type="sfx">Acc</mk><mk type="sfx">P3</mk></mw><gra type="gra" index="3" head="1" relation="NSUBJ"/></mor></w><error/></g>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="4" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">picks up ladder and examines</a>
+    <a type="extension" flavor="pho">&lt;1w&gt; w6s</a>
+  </u>
+  <u who="CHI" uID="u30">
+    <w untranscribed="unintelligible">xxx</w>
+    <t type="p"></t>
+
+  </u>
+  <u who="MOT" uID="u31">
+    <w>oop<shortening>s</shortening><mor type="mor"><mw><pos><c>noun</c></pos><stem>oop</stem><mk type="sfx">Plur</mk></mw><gra type="gra" index="1" head="4" relation="OBJ"/></mor></w>
+    <pause symbolic-length="simple"></pause>
+    <w>there<mor type="mor"><mw><pos><c>adv</c></pos><stem>there</stem></mw><gra type="gra" index="2" head="1" relation="ADVMOD"/></mor></w>
+    <w>you<mor type="mor"><mw><pos><c>pron</c></pos><stem>you</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="3" head="4" relation="NSUBJ"/></mor></w>
+    <w>go<mor type="mor"><mw><pos><c>verb</c></pos><stem>go</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="4" head="4" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="5" head="4" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;bef&gt; examines beds . &lt;dur&gt; puts two beds together</a>
+  </u>
+  <u who="CHI" uID="u32">
+    <e><action/><ga type="paralinguistics">clears throat</ga></e>
+    <t type="p"></t>
+
+    <a type="actions">takes man and holds over car</a>
+  </u>
+  <u who="MOT" uID="u33">
+    <w>who's<mor type="mor"><mw><pos><c>pron</c></pos><stem>who</stem><mk type="sfx">Int</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="1" head="4" relation="ROOT"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="2" head="4" relation="COP"/></mor-post></mor></w>
+    <w>this<mor type="mor"><mw><pos><c>det</c></pos><stem>this</stem><mk type="sfx">Def</mk><mk type="sfx">Dem</mk></mw><gra type="gra" index="3" head="4" relation="DET"/></mor></w>
+    <w>one<mor type="mor"><mw><pos><c>noun</c></pos><stem>one</stem></mw><gra type="gra" index="4" head="1" relation="NSUBJ"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="5" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;aft&gt; drops , picks up and holds out to Rick</a>
+  </u>
+  <u who="CHI" uID="u34">
+    <w>man<mor type="mor"><mw><pos><c>noun</c></pos><stem>man</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">attempts to put man in car . man falls . picks man up and examines . attempts to put in car again</a>
+  </u>
+  <u who="MOT" uID="u35">
+    <w>this<mor type="mor"><mw><pos><c>det</c></pos><stem>this</stem><mk type="sfx">Def</mk><mk type="sfx">Dem</mk></mw><gra type="gra" index="1" head="2" relation="DET"/></mor></w>
+    <w>one<mor type="mor"><mw><pos><c>noun</c></pos><stem>one</stem></mw><gra type="gra" index="2" head="2" relation="ROOT"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="3" head="2" relation="PUNCT"/></mor></t>
+
+    <a type="actions">continues holding man out to Rick</a>
+  </u>
+  <u who="CHI" uID="u36">
+    <w untranscribed="unintelligible-with-pho">yyy</w>
+    <t type="p"></t>
+
+    <a type="extension" flavor="pho">me</a>
+  </u>
+  <u who="MOT" uID="u37">
+    <w>who's<mor type="mor"><mw><pos><c>pron</c></pos><stem>who</stem><mk type="sfx">Int</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="1" head="4" relation="NSUBJ"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="2" head="4" relation="COP"/></mor-post></mor></w>
+    <w>this<mor type="mor"><mw><pos><c>det</c></pos><stem>this</stem><mk type="sfx">Def</mk><mk type="sfx">Dem</mk></mw><gra type="gra" index="3" head="4" relation="DET"/></mor></w>
+    <w>one<mor type="mor"><mw><pos><c>noun</c></pos><stem>one</stem></mw><gra type="gra" index="4" head="5" relation="ROOT"/></mor></w>
+    <pause symbolic-length="simple"></pause>
+    <w>Matt<mor type="mor"><mw><pos><c>noun</c></pos><stem>Matt</stem></mw><gra type="gra" index="5" head="4" relation="APPOS"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="6" head="4" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;aft&gt; takes man out of dollhouse and puts down</a>
+  </u>
+  <u who="CHI" uID="u38">
+    <w>man<mor type="mor"><mw><pos><c>noun</c></pos><stem>man</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;aft&gt; takes man from car and puts man from Mother in car</a>
+  </u>
+  <u who="MOT" uID="u39">
+    <w>who's<mor type="mor"><mw><pos><c>pron</c></pos><stem>who</stem><mk type="sfx">Int</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="1" head="4" relation="ROOT"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="2" head="4" relation="COP"/></mor-post></mor></w>
+    <w>this<mor type="mor"><mw><pos><c>det</c></pos><stem>this</stem><mk type="sfx">Def</mk><mk type="sfx">Dem</mk></mw><gra type="gra" index="3" head="4" relation="DET"/></mor></w>
+    <w>one<mor type="mor"><mw><pos><c>noun</c></pos><stem>one</stem></mw><gra type="gra" index="4" head="1" relation="NSUBJ"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="5" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">takes dog out of dollhouse , examines briefly , and holds out to Rick</a>
+  </u>
+  <u who="CHI" uID="u40">
+    <w untranscribed="unintelligible-with-pho">yyy</w>
+    <w>know<mor type="mor"><mw><pos><c>verb</c></pos><stem>know</stem><mk type="sfx">Fin</mk><mk type="sfx">Imp</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">takes dog from Mother and tosses in dollhouse</a>
+    <a type="extension" flavor="pho">&lt;1w&gt; &amp;-eh</a>
+  </u>
+  <u who="MOT" uID="u41">
+    <w>you<mor type="mor"><mw><pos><c>pron</c></pos><stem>you</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="1" head="4" relation="NSUBJ"/></mor></w>
+    <w>don't<mor type="mor"><mw><pos><c>aux</c></pos><stem>do</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="2" head="4" relation="AUX"/><mor-post><mw><pos><c>part</c></pos><stem>not</stem></mw><gra type="gra" index="3" head="4" relation="ADVMOD"/></mor-post></mor></w>
+    <w>know<mor type="mor"><mw><pos><c>verb</c></pos><stem>know</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="4" head="4" relation="ROOT"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="5" head="4" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; takes some objects out of dollhouse .</a>
+  </u>
+  <u who="MOT" uID="u42">
+    <w>oh<mor type="mor"><mw><pos><c>intj</c></pos><stem>oh</stem></mw><gra type="gra" index="1" head="2" relation="DISCOURSE"/></mor></w>
+    <pause symbolic-length="simple"></pause>
+    <w>here's<mor type="mor"><mw><pos><c>adv</c></pos><stem>here</stem></mw><gra type="gra" index="2" head="5" relation="ROOT"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="3" head="2" relation="COP"/></mor-post></mor></w>
+    <w>some<mor type="mor"><mw><pos><c>det</c></pos><stem>some</stem><mk type="sfx">Def</mk></mw><gra type="gra" index="4" head="5" relation="DET"/></mor></w>
+    <w>dinner<mor type="mor"><mw><pos><c>noun</c></pos><stem>dinner</stem></mw><gra type="gra" index="5" head="2" relation="NSUBJ"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="6" head="2" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; shows table to Rick . puts table and other objects on floor</a>
+  </u>
+  <u who="CHI" uID="u43">
+    <w untranscribed="unintelligible-with-pho">yyy</w>
+    <w>pottie<mor type="mor"><mw><pos><c>noun</c></pos><stem>pottie</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">holds crotch</a>
+    <a type="extension" flavor="pho">&amp;-eh pa+i</a>
+  </u>
+  <u who="MOT" uID="u44">
+    <w>you<mor type="mor"><mw><pos><c>pron</c></pos><stem>you</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="1" head="3" relation="NSUBJ"/></mor></w>
+    <w>hafta<mor type="mor"><mw><pos><c>aux</c></pos><stem>hafta</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S</mk></mw><gra type="gra" index="2" head="3" relation="AUX"/></mor></w>
+    <w>go<mor type="mor"><mw><pos><c>verb</c></pos><stem>go</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="3" head="4" relation="ROOT"/></mor></w>
+    <w>pottie<mor type="mor"><mw><pos><c>noun</c></pos><stem>pottie</stem></mw><gra type="gra" index="4" head="3" relation="OBJ"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="5" head="3" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="CHI" uID="u45">
+    <w>yes<mor type="mor"><mw><pos><c>intj</c></pos><stem>yes</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">walks toward door</a>
+  </u>
+  <u who="MOT" uID="u46">
+    <w>okay<mor type="mor"><mw><pos><c>intj</c></pos><stem>okay</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="paralinguistics">&lt;1w&gt; laughs</a>
+  </u>
+  <u who="MOT" uID="u47">
+    <w>c<shortening>o</shortening>me<mor type="mor"><mw><pos><c>verb</c></pos><stem>come</stem><mk type="sfx">Fin</mk><mk type="sfx">Imp</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="2" relation="ROOT"/></mor></w>
+    <w><shortening>h</shortening>ere<mor type="mor"><mw><pos><c>adv</c></pos><stem>here</stem></mw><gra type="gra" index="2" head="1" relation="ADVMOD"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="3" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; puts object down . puts arm toward Rick</a>
+  </u>
+  <u who="CHI" uID="u48">
+    <w>hm<p type="drawl"/><mor type="mor"><mw><pos><c>intj</c></pos><stem>hm</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">walks toward Mother</a>
+  </u>
+  <u who="MOT" uID="u49">
+    <w>you<mor type="mor"><mw><pos><c>pron</c></pos><stem>you</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="1" head="2" relation="NSUBJ"/></mor></w>
+    <w>wan<shortening>t</shortening><mor type="mor"><mw><pos><c>verb</c></pos><stem>want</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="2" head="7" relation="ROOT"/></mor></w>
+    <w><shortening>t</shortening>a<mor type="mor"><mw><pos><c>part</c></pos><stem>to</stem></mw><gra type="gra" index="3" head="4" relation="MARK"/></mor></w>
+    <w>play<mor type="mor"><mw><pos><c>verb</c></pos><stem>play</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="4" head="2" relation="XCOMP"/></mor></w>
+    <w>for<mor type="mor"><mw><pos><c>adp</c></pos><stem>for</stem></mw><gra type="gra" index="5" head="7" relation="CASE"/></mor></w>
+    <w>a<mor type="mor"><mw><pos><c>det</c></pos><stem>a</stem><mk type="sfx">Ind</mk><mk type="sfx">Art</mk></mw><gra type="gra" index="6" head="7" relation="DET"/></mor></w>
+    <w>minute<mor type="mor"><mw><pos><c>noun</c></pos><stem>minute</stem></mw><gra type="gra" index="7" head="4" relation="OBL"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="8" head="2" relation="PUNCT"/></mor></t>
+
+    <a type="actions">pulls Rick in</a>
+  </u>
+  <u who="CHI" uID="u50">
+    <e><action/></e>
+    <t type="p"></t>
+
+    <a type="gesture">nods</a>
+  </u>
+  <u who="MOT" uID="u51">
+    <w>okay<mor type="mor"><mw><pos><c>intj</c></pos><stem>okay</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; has arm on Rick's back , helping him sit .</a>
+    <a type="paralinguistics">&lt;1w&gt; spoken in tender loving care voice</a>
+  </u>
+  <u who="MOT" uID="u52">
+    <w>can<mor type="mor"><mw><pos><c>aux</c></pos><stem>can</stem><mk type="sfx">Fin</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="3" relation="AUX"/></mor></w>
+    <w>you<mor type="mor"><mw><pos><c>pron</c></pos><stem>you</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="2" head="3" relation="NSUBJ"/></mor></w>
+    <w>build<mor type="mor"><mw><pos><c>verb</c></pos><stem>build</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="3" head="8" relation="ROOT"/></mor></w>
+    <w>me<mor type="mor"><mw><pos><c>pron</c></pos><stem>I</stem><mk type="sfx">Prs</mk><mk type="sfx">Acc</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="4" head="3" relation="IOBJ"/></mor></w>
+    <w>a<mor type="mor"><mw><pos><c>det</c></pos><stem>a</stem><mk type="sfx">Ind</mk><mk type="sfx">Art</mk></mw><gra type="gra" index="5" head="7" relation="DET"/></mor></w>
+    <w>tall<mor type="mor"><mw><pos><c>adj</c></pos><stem>tall</stem><mk type="sfx">Pos</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="6" head="7" relation="AMOD"/></mor></w>
+    <w>tower<mor type="mor"><mw><pos><c>noun</c></pos><stem>tower</stem></mw><gra type="gra" index="7" head="3" relation="OBJ"/></mor></w>
+    <w>again<mor type="mor"><mw><pos><c>adv</c></pos><stem>again</stem></mw><gra type="gra" index="8" head="3" relation="ADVMOD"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="9" head="3" relation="PUNCT"/></mor></t>
+
+    <a type="gesture">&lt;1w&gt; points slightly to shape box objects</a>
+    <a type="actions">&lt;1w&gt; touches objects on floor</a>
+  </u>
+  <u who="CHI" uID="u53">
+    <w>huh<mor type="mor"><mw><pos><c>intj</c></pos><stem>huh</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="MOT" uID="u54">
+    <w>can<mor type="mor"><mw><pos><c>aux</c></pos><stem>can</stem><mk type="sfx">Fin</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="3" relation="AUX"/></mor></w>
+    <w>you<mor type="mor"><mw><pos><c>pron</c></pos><stem>you</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="2" head="3" relation="NSUBJ"/></mor></w>
+    <w>build<mor type="mor"><mw><pos><c>verb</c></pos><stem>build</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="3" head="8" relation="ROOT"/></mor></w>
+    <w>me<mor type="mor"><mw><pos><c>pron</c></pos><stem>I</stem><mk type="sfx">Prs</mk><mk type="sfx">Acc</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="4" head="3" relation="IOBJ"/></mor></w>
+    <w>a<mor type="mor"><mw><pos><c>det</c></pos><stem>a</stem><mk type="sfx">Ind</mk><mk type="sfx">Art</mk></mw><gra type="gra" index="5" head="7" relation="DET"/></mor></w>
+    <w>big<mor type="mor"><mw><pos><c>adj</c></pos><stem>big</stem><mk type="sfx">Pos</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="6" head="7" relation="AMOD"/></mor></w>
+    <w>tower<mor type="mor"><mw><pos><c>noun</c></pos><stem>tower</stem></mw><gra type="gra" index="7" head="3" relation="OBJ"/></mor></w>
+    <w>again<mor type="mor"><mw><pos><c>adv</c></pos><stem>again</stem></mw><gra type="gra" index="8" head="3" relation="ADVMOD"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="9" head="3" relation="PUNCT"/></mor></t>
+
+    <a type="actions">begins to demonstrate building a tower with shape box objects</a>
+  </u>
+  <u who="CHI" uID="u55">
+    <w>huh<mor type="mor"><mw><pos><c>intj</c></pos><stem>huh</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="MOT" uID="u56">
+    <w>uhoh<mor type="mor"><mw><pos><c>intj</c></pos><stem>uhoh</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">stops building . picks up shape box object and holds out to Rick</a>
+  </u>
+  <u who="CHI" uID="u57">
+    <e><action/></e>
+    <t type="p"></t>
+
+    <a type="actions">takes object from Mother and puts on tower</a>
+  </u>
+  <u who="MOT" uID="u58">
+    <w>be<mor type="mor"><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Imp</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="2" relation="COP"/></mor></w>
+    <w>careful<mor type="mor"><mw><pos><c>adj</c></pos><stem>careful</stem><mk type="sfx">Pos</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="2" head="2" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="3" head="2" relation="PUNCT"/></mor></t>
+
+    <a type="actions">picks up another shape box object and holds out to Rick</a>
+  </u>
+  <u who="CHI" uID="u59">
+    <w type="filler">uh</w>
+    <t type="p"></t>
+
+    <a type="actions">&lt;bef&gt; takes object from Mother and puts on tower . &lt;aft&gt; picks up another shape box object and puts on tower . tower falls</a>
+  </u>
+  <u who="MOT" uID="u60">
+    <w>oh<mor type="mor"><mw><pos><c>intj</c></pos><stem>oh</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="paralinguistics">&lt;1w&gt; laughs</a>
+  </u>
+  <u who="MOT" uID="u61">
+    <w>whoa<mor type="mor"><mw><pos><c>intj</c></pos><stem>whoa</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;aft&gt; gathers shape box objects</a>
+  </u>
+  <u who="CHI" uID="u62">
+    <w untranscribed="unintelligible-with-pho">yyy</w>
+    <t type="p"></t>
+
+    <a type="paralinguistics">&lt;bef&gt; laughs</a>
+    <a type="extension" flavor="pho">&lt;1w&gt; e+6h e</a>
+  </u>
+  <u who="CHI" uID="u63">
+    <w untranscribed="unintelligible-with-pho">yyy</w>
+    <w>Mommy<mor type="mor"><mw><pos><c>noun</c></pos><stem>Mommy</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;aft&gt; orients other man in car . touches other man in car</a>
+    <a type="extension" flavor="pho">&lt;1w&gt; e+6h e</a>
+  </u>
+  <u who="MOT" uID="u64">
+    <e><action/></e>
+    <t type="p"></t>
+
+    <a type="actions">restacks shape box objects . picks up shape box objects and examines . puts shape box objects down . picks back up and puts in shape box</a>
+  </u>
+  <u who="MOT" uID="u65">
+    <w>here<mor type="mor"><mw><pos><c>adv</c></pos><stem>here</stem></mw><gra type="gra" index="1" head="4" relation="ROOT"/></mor></w>
+    <pause symbolic-length="simple"></pause>
+    <w>who's<mor type="mor"><mw><pos><c>pron</c></pos><stem>who</stem><mk type="sfx">Rel</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="2" head="4" relation="NSUBJ"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="3" head="4" relation="COP"/></mor-post></mor></w>
+    <w>this<mor type="mor"><mw><pos><c>pron</c></pos><stem>this</stem><mk type="sfx">Dem</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="4" head="1" relation="ADVCL-RELCL"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="5" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;bef&gt; takes man and chair out of dollhouse and fits them together . &lt;dur&gt; holds out to Rick</a>
+  </u>
+  <u who="CHI" uID="u66">
+    <w untranscribed="unintelligible-with-pho">yyy</w>
+    <w>chair<mor type="mor"><mw><pos><c>noun</c></pos><stem>chair</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="extension" flavor="pho">&lt;1w&gt; 6m 6h ki</a>
+  </u>
+  <u who="CHI" uID="u67">
+    <w untranscribed="unintelligible-with-pho">yyy</w>
+    <t type="p"></t>
+
+    <a type="actions">&lt;1w&gt; takes man from car and puts on floor</a>
+    <a type="extension" flavor="pho">&lt;1w&gt; 6m 6h ki</a>
+  </u>
+  <u who="MOT" uID="u68">
+    <w>okay<mor type="mor"><mw><pos><c>intj</c></pos><stem>okay</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;aft&gt; reaches in dollhouse and discards objects from floor</a>
+    <a type="paralinguistics">spoken softly</a>
+  </u>
+  <u who="CHI" uID="u69">
+    <w untranscribed="unintelligible">xxx</w>
+    <t type="p"></t>
+
+    <a type="actions">&lt;bef&gt; opens dollhouse door . &lt;dur&gt; picks up man from lfoor . &lt;aft&gt; puts man in dollhouse through door . shuts door</a>
+  </u>
+  <u who="MOT" uID="u70">
+    <w>oh<mor type="mor"><mw><pos><c>intj</c></pos><stem>oh</stem></mw><gra type="gra" index="1" head="2" relation="DISCOURSE"/></mor></w>
+    <pause symbolic-length="simple"></pause>
+    <w>want<mor type="mor"><mw><pos><c>verb</c></pos><stem>want</stem><mk type="sfx">Fin</mk><mk type="sfx">Imp</mk><mk type="sfx">S</mk></mw><gra type="gra" index="2" head="6" relation="ROOT"/></mor></w>
+    <w>to<mor type="mor"><mw><pos><c>part</c></pos><stem>to</stem></mw><gra type="gra" index="3" head="4" relation="MARK"/></mor></w>
+    <w>set<mor type="mor"><mw><pos><c>verb</c></pos><stem>set</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="4" head="2" relation="XCOMP"/></mor></w>
+    <w>it<mor type="mor"><mw><pos><c>pron</c></pos><stem>it</stem><mk type="sfx">Prs</mk><mk type="sfx">Acc</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="5" head="4" relation="OBJ"/></mor></w>
+    <w>up<mor type="mor"><mw><pos><c>adp</c></pos><stem>up</stem></mw><gra type="gra" index="6" head="4" relation="COMPOUND-PRT"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="7" head="2" relation="PUNCT"/></mor></t>
+
+    <a type="actions">reaches in dollhouse , takes out objects , and puts down on floor</a>
+  </u>
+  <u who="MOT" uID="u71">
+    <w>yeah<mor type="mor"><mw><pos><c>intj</c></pos><stem>yeah</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="paralinguistics">&lt;1w&gt; spoken softly</a>
+  </u>
+  <u who="MOT" uID="u72">
+    <w>here<mor type="mor"><mw><pos><c>adv</c></pos><stem>here</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="MOT" uID="u73">
+    <w>put<mor type="mor"><mw><pos><c>verb</c></pos><stem>put</stem><mk type="sfx">Fin</mk><mk type="sfx">Imp</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="7" relation="ROOT"/></mor></w>
+    <w>your<mor type="mor"><mw><pos><c>pron</c></pos><stem>your</stem><mk type="sfx">Prs</mk><mk type="sfx">Gen</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="2" head="3" relation="NMOD-POSS"/></mor></w>
+    <w>chair<mor type="mor"><mw><pos><c>noun</c></pos><stem>chair</stem></mw><gra type="gra" index="3" head="1" relation="OBJ"/></mor></w>
+    <w>in<mor type="mor"><mw><pos><c>adp</c></pos><stem>in</stem></mw><gra type="gra" index="4" head="7" relation="CASE"/></mor></w>
+    <w>the<mor type="mor"><mw><pos><c>det</c></pos><stem>the</stem><mk type="sfx">Def</mk><mk type="sfx">Art</mk></mw><gra type="gra" index="5" head="7" relation="DET"/></mor></w>
+    <w>living<mor type="mor"><mw><pos><c>noun</c></pos><stem>living</stem></mw><gra type="gra" index="6" head="7" relation="COMPOUND"/></mor></w>
+    <w>room<mor type="mor"><mw><pos><c>noun</c></pos><stem>room</stem></mw><gra type="gra" index="7" head="1" relation="OBL"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="8" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; puts chair in dollhouse . arranges picnic objects outside</a>
+  </u>
+  <u who="CHI" uID="u74">
+    <e><happening>laughs</happening></e>
+    <t type="p"></t>
+
+    <a type="actions">&lt;bef&gt; holds man and chair . touches nesting cup . puts chair on car . picks up man and attempts to put in car</a>
+  </u>
+  <u who="CHI" uID="u75">
+    <w>pottie<mor type="mor"><mw><pos><c>noun</c></pos><stem>pottie</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">holds crotch</a>
+  </u>
+  <u who="MOT" uID="u76">
+    <w>okay<mor type="mor"><mw><pos><c>intj</c></pos><stem>okay</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">holds out hand to Rick</a>
+  </u>
+  <u who="CHI" uID="u77">
+    <e><action/></e>
+    <t type="p"></t>
+
+    <a type="explanation">pottie break</a>
+    <a type="actions">takes Mother's hand</a>
+  </u>
+  <u who="CHI" uID="u78">
+    <w type="filler">uh</w>
+    <w>byebye<mor type="mor"><mw><pos><c>noun</c></pos><stem>Byebye</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="CHI" uID="u79">
+    <w untranscribed="unintelligible-with-pho">yyy</w>
+    <t type="p"></t>
+
+    <a type="actions">&lt;1w&gt; picks up nesting cup , touches to car and holds nesting cup</a>
+  </u>
+  <u who="MOT" uID="u80">
+    <w>look_it<mor type="mor"><mw><pos><c>noun</c></pos><stem>lookit</stem></mw><gra type="gra" index="1" head="4" relation="ROOT"/></mor></w>
+    <pause symbolic-length="simple"></pause>
+    <w>they're<mor type="mor"><mw><pos><c>pron</c></pos><stem>they</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">P3</mk></mw><gra type="gra" index="2" head="4" relation="NSUBJ"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">P3</mk></mw><gra type="gra" index="3" head="4" relation="AUX"/></mor-post></mor></w>
+    <w>cookin<shortening>g</shortening><mor type="mor"><mw><pos><c>verb</c></pos><stem>cook</stem><mk type="sfx">Part</mk><mk type="sfx">Pres</mk><mk type="sfx">S</mk></mw><gra type="gra" index="4" head="1" relation="ACL-RELCL"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="5" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="paralinguistics">&lt;1w&gt; yawns</a>
+  </u>
+  <u who="MOT" uID="u81">
+    <w>they're<mor type="mor"><mw><pos><c>pron</c></pos><stem>they</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">P3</mk></mw><gra type="gra" index="1" head="4" relation="NSUBJ"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">P3</mk></mw><gra type="gra" index="2" head="4" relation="AUX"/></mor-post></mor></w>
+    <w>gonna<mor type="mor"><mw><pos><c>part</c></pos><stem>gonna</stem></mw><gra type="gra" index="3" head="4" relation="ADVMOD"/></mor></w>
+    <w>eat<mor type="mor"><mw><pos><c>verb</c></pos><stem>eat</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="4" head="4" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="5" head="4" relation="PUNCT"/></mor></t>
+
+    <a type="gesture">&lt;1w&gt; points to table and grill</a>
+  </u>
+  <u who="MOT" uID="u82">
+    <w>the<mor type="mor"><mw><pos><c>det</c></pos><stem>the</stem><mk type="sfx">Def</mk><mk type="sfx">Art</mk></mw><gra type="gra" index="1" head="2" relation="DET"/></mor></w>
+    <w>doggie's<mor type="mor"><mw><pos><c>noun</c></pos><stem>doggie</stem></mw><gra type="gra" index="2" head="5" relation="NSUBJ"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="3" head="5" relation="AUX"/></mor-post></mor></w>
+    <w>gonna<mor type="mor"><mw><pos><c>adv</c></pos><stem>gonna</stem></mw><gra type="gra" index="4" head="5" relation="ADVMOD"/></mor></w>
+    <w>sit<mor type="mor"><mw><pos><c>verb</c></pos><stem>sit</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="5" head="9" relation="ROOT"/></mor></w>
+    <w>there<mor type="mor"><mw><pos><c>adv</c></pos><stem>there</stem></mw><gra type="gra" index="6" head="5" relation="ADVMOD"/></mor></w>
+    <w>at<mor type="mor"><mw><pos><c>adp</c></pos><stem>at</stem></mw><gra type="gra" index="7" head="9" relation="CASE"/></mor></w>
+    <w>the<mor type="mor"><mw><pos><c>det</c></pos><stem>the</stem><mk type="sfx">Def</mk><mk type="sfx">Art</mk></mw><gra type="gra" index="8" head="9" relation="DET"/></mor></w>
+    <w>table<mor type="mor"><mw><pos><c>noun</c></pos><stem>table</stem></mw><gra type="gra" index="9" head="5" relation="OBL"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="10" head="5" relation="PUNCT"/></mor></t>
+
+  </u>
+  <u who="MOT" uID="u83">
+    <w>mom's<mor type="mor"><mw><pos><c>noun</c></pos><stem>mom</stem></mw><gra type="gra" index="1" head="4" relation="NSUBJ"/><mor-post><mw><pos><c>aux</c></pos><stem>be</stem><mk type="sfx">Fin</mk><mk type="sfx">Ind</mk><mk type="sfx">Pres</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="2" head="4" relation="AUX"/></mor-post></mor></w>
+    <w>gonna<mor type="mor"><mw><pos><c>adv</c></pos><stem>gonna</stem></mw><gra type="gra" index="3" head="4" relation="ADVMOD"/></mor></w>
+    <w>sit<mor type="mor"><mw><pos><c>verb</c></pos><stem>sit</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="4" head="7" relation="ROOT"/></mor></w>
+    <w>there<mor type="mor"><mw><pos><c>adv</c></pos><stem>there</stem></mw><gra type="gra" index="5" head="4" relation="ADVMOD"/></mor></w>
+    <w>next_to<mor type="mor"><mw><pos><c>noun</c></pos><stem>nextto</stem></mw><gra type="gra" index="6" head="7" relation="COMPOUND"/></mor></w>
+    <w>dad<mor type="mor"><mw><pos><c>noun</c></pos><stem>dad</stem></mw><gra type="gra" index="7" head="4" relation="PARATAXIS"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="8" head="4" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; stacks shape box objects . puts shape box objects in shape box</a>
+  </u>
+  <u who="CHI" uID="u84">
+    <w untranscribed="unintelligible-with-pho">yyy</w>
+    <w>eat<mor type="mor"><mw><pos><c>verb</c></pos><stem>eat</stem><mk type="sfx">Fin</mk><mk type="sfx">Imp</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; picks up man and puts in lawn chair .</a>
+  </u>
+  <u who="CHI" uID="u85">
+    <g><w>eat</w><k type="retracing with correction"/></g>
+    <w>eating<mor type="mor"><mw><pos><c>noun</c></pos><stem>eating</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; picks up again in other hand and lets go . touches grill . picks up man and attempts to set him on grill</a>
+  </u>
+  <u who="MOT" uID="u86">
+    <w>yeah<mor type="mor"><mw><pos><c>intj</c></pos><stem>yeah</stem></mw><gra type="gra" index="1" head="4" relation="DISCOURSE"/></mor></w>
+    <pause symbolic-length="simple"></pause>
+    <w>can<mor type="mor"><mw><pos><c>aux</c></pos><stem>can</stem><mk type="sfx">Fin</mk><mk type="sfx">S</mk></mw><gra type="gra" index="2" head="4" relation="AUX"/></mor></w>
+    <w>you<mor type="mor"><mw><pos><c>pron</c></pos><stem>you</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="3" head="4" relation="NSUBJ"/></mor></w>
+    <w>put<mor type="mor"><mw><pos><c>verb</c></pos><stem>put</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="4" head="6" relation="ROOT"/></mor></w>
+    <w><shortening>th</shortening>em<mor type="mor"><mw><pos><c>pron</c></pos><stem>they</stem><mk type="sfx">Prs</mk><mk type="sfx">Acc</mk><mk type="sfx">P3</mk></mw><gra type="gra" index="5" head="4" relation="OBJ"/></mor></w>
+    <w>back<mor type="mor"><mw><pos><c>adv</c></pos><stem>back</stem></mw><gra type="gra" index="6" head="4" relation="ADVMOD"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="7" head="4" relation="PUNCT"/></mor></t>
+
+    <a type="gesture">&lt;1w&gt; points to car</a>
+  </u>
+  <u who="MOT" uID="u87">
+    <w>can<mor type="mor"><mw><pos><c>aux</c></pos><stem>can</stem><mk type="sfx">Fin</mk><mk type="sfx">S</mk></mw><gra type="gra" index="1" head="3" relation="AUX"/></mor></w>
+    <w>you<mor type="mor"><mw><pos><c>pron</c></pos><stem>you</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="2" head="3" relation="NSUBJ"/></mor></w>
+    <w>drive<mor type="mor"><mw><pos><c>verb</c></pos><stem>drive</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="3" head="15" relation="ROOT"/></mor></w>
+    <w>your<mor type="mor"><mw><pos><c>pron</c></pos><stem>your</stem><mk type="sfx">Prs</mk><mk type="sfx">Gen</mk><mk type="sfx">S2</mk></mw><gra type="gra" index="4" head="5" relation="NMOD-POSS"/></mor></w>
+    <w>people<mor type="mor"><mw><pos><c>noun</c></pos><stem>person</stem><mk type="sfx">Plur</mk></mw><gra type="gra" index="5" head="3" relation="OBJ"/></mor></w>
+    <w>back<mor type="mor"><mw><pos><c>adv</c></pos><stem>back</stem></mw><gra type="gra" index="6" head="3" relation="ADVMOD"/></mor></w>
+    <w>in<mor type="mor"><mw><pos><c>adp</c></pos><stem>in</stem></mw><gra type="gra" index="7" head="9" relation="CASE"/></mor></w>
+    <w>the<mor type="mor"><mw><pos><c>det</c></pos><stem>the</stem><mk type="sfx">Def</mk><mk type="sfx">Art</mk></mw><gra type="gra" index="8" head="9" relation="DET"/></mor></w>
+    <w>car<mor type="mor"><mw><pos><c>noun</c></pos><stem>car</stem></mw><gra type="gra" index="9" head="6" relation="OBL"/></mor></w>
+    <w>and<mor type="mor"><mw><pos><c>cconj</c></pos><stem>and</stem></mw><gra type="gra" index="10" head="13" relation="CC"/></mor></w>
+    <w>they<mor type="mor"><mw><pos><c>pron</c></pos><stem>they</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">P3</mk></mw><gra type="gra" index="11" head="13" relation="NSUBJ"/></mor></w>
+    <w>can<mor type="mor"><mw><pos><c>aux</c></pos><stem>can</stem><mk type="sfx">Fin</mk><mk type="sfx">S</mk></mw><gra type="gra" index="12" head="13" relation="AUX"/></mor></w>
+    <w>have<mor type="mor"><mw><pos><c>verb</c></pos><stem>have</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="13" head="3" relation="CONJ"/></mor></w>
+    <w>dinner<mor type="mor"><mw><pos><c>noun</c></pos><stem>dinner</stem></mw><gra type="gra" index="14" head="13" relation="OBJ"/></mor></w>
+    <pause symbolic-length="simple"></pause>
+    <w>too<mor type="mor"><mw><pos><c>adv</c></pos><stem>too</stem></mw><gra type="gra" index="15" head="13" relation="ADVMOD"/></mor></w>
+    <t type="q"><mor type="mor"><mt type="q"/><gra type="gra" index="16" head="3" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; reaches for grill , sets up and arranges objects on floor</a>
+  </u>
+  <u who="CHI" uID="u88">
+    <w>no<mor type="mor"><mw><pos><c>intj</c></pos><stem>no</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; puts man down .</a>
+  </u>
+  <u who="CHI" uID="u89">
+    <w>hey<mor type="mor"><mw><pos><c>intj</c></pos><stem>hey</stem></mw><gra type="gra" index="1" head="1" relation="ROOT"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="2" head="1" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; touches objects . &lt;1w&gt; fingers nesting cup</a>
+  </u>
+  <u who="MOT" uID="u90">
+    <w>they<mor type="mor"><mw><pos><c>pron</c></pos><stem>they</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">P3</mk></mw><gra type="gra" index="1" head="2" relation="NSUBJ"/></mor></w>
+    <w>can<mor type="mor"><mw><pos><c>aux</c></pos><stem>can</stem><mk type="sfx">Fin</mk><mk type="sfx">S</mk></mw><gra type="gra" index="2" head="2" relation="ROOT"/></mor></w>
+    <t type="trail off"><mor type="mor"><mt type="trail off"/><gra type="gra" index="3" head="2" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; puts man in chair .</a>
+  </u>
+  <u who="MOT" uID="u91">
+    <w>she<mor type="mor"><mw><pos><c>pron</c></pos><stem>she</stem><mk type="sfx">Prs</mk><mk type="sfx">Nom</mk><mk type="sfx">S3</mk></mw><gra type="gra" index="1" head="3" relation="NSUBJ"/></mor></w>
+    <w>can<mor type="mor"><mw><pos><c>aux</c></pos><stem>can</stem><mk type="sfx">Fin</mk><mk type="sfx">S</mk></mw><gra type="gra" index="2" head="3" relation="AUX"/></mor></w>
+    <w>sit<mor type="mor"><mw><pos><c>verb</c></pos><stem>sit</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="3" head="4" relation="ROOT"/></mor></w>
+    <w>here<mor type="mor"><mw><pos><c>adv</c></pos><stem>here</stem></mw><gra type="gra" index="4" head="3" relation="ADVMOD"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="5" head="3" relation="PUNCT"/></mor></t>
+
+    <a type="actions">&lt;1w&gt; takes chair out of dollhouse and puts on floor . &lt;1w&gt; stacks nesting cups and discards</a>
+  </u>
+  <u who="MOT" uID="u92">
+    <w>and<mor type="mor"><mw><pos><c>cconj</c></pos><stem>and</stem></mw><gra type="gra" index="1" head="4" relation="CC"/></mor></w>
+    <w>someone<mor type="mor"><mw><pos><c>pron</c></pos><stem>someone</stem><mk type="sfx">Ind</mk><mk type="sfx">S1</mk></mw><gra type="gra" index="2" head="4" relation="NSUBJ"/></mor></w>
+    <w>can<mor type="mor"><mw><pos><c>aux</c></pos><stem>can</stem><mk type="sfx">Fin</mk><mk type="sfx">S</mk></mw><gra type="gra" index="3" head="4" relation="AUX"/></mor></w>
+    <w>sit<mor type="mor"><mw><pos><c>verb</c></pos><stem>sit</stem><mk type="sfx">Inf</mk><mk type="sfx">S</mk></mw><gra type="gra" index="4" head="6" relation="ROOT"/></mor></w>
+    <w>over<mor type="mor"><mw><pos><c>adp</c></pos><stem>over</stem></mw><gra type="gra" index="5" head="4" relation="COMPOUND-PRT"/></mor></w>
+    <w>here<mor type="mor"><mw><pos><c>adv</c></pos><stem>here</stem></mw><gra type="gra" index="6" head="4" relation="OBL"/></mor></w>
+    <t type="p"><mor type="mor"><mt type="p"/><gra type="gra" index="7" head="4" relation="PUNCT"/></mor></t>
+
+  </u>
+</CHAT>
