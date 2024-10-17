@@ -12,7 +12,7 @@ class Childes(corpus.Corpus):
             self.document_headers
 
             self.num_documents
-            self.document_info_df
+            self.document_info_df: required columns: ["name", "num_sequences", "num_types", "num_tokens"]
             self.document_list
 
             self.num_sequences
@@ -40,14 +40,19 @@ class Childes(corpus.Corpus):
         self.exclude_target_child = None
         self.order = None
 
+        ## TODO implement subsetting the corpus by sex of speaker, target child, language, corpus
+        ## TODO implement subsetting by age, adding punctuation, excluding target child self speech
+        ## TODO implement importing phonological, morphological, and syntactic codings where available
+        ## TODO implement making sure empty columns are filled by external data if it is available on CHILDES
+
+        self.document_info_list = None
+
     def get_documents_from_csv_file(self, input_path):
-        with open('your_file.csv', newline='') as csvfile:
+        with open('your_file.csv', newline='') as file:
 
-            csvreader = csv.reader(csvfile)
-            next(csvreader) # skip the header row
+            reader = csv.DictReader(file)
+            utterance_dict_list = [row for row in reader]
 
-            # Convert the CSV reader object to a list of lists
-            utterance_info_list = list(csvreader)
 
         document_sequence_list = None
         document_info_dict = None
