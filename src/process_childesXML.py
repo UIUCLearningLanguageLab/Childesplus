@@ -3,54 +3,17 @@ import csv
 import os
 import re
 
-def xml_to_csv(input_directory, output_path="./"):
-    """Main function to iterate through XML files and generate a CSV."""
-    all_utterances = []
-    namespace = {'ns': 'http://www.talkbank.org/ns/talkbank'}
-    file_counter = 0
-
-    # Process all XML files in the input directory
+def get_document_file_path_list(input_directory):
+    file_path_list = []
     for root_dir, _, files in os.walk(input_directory):
         for file_name in files:
             if file_name.endswith('.xml'):
                 file_path = os.path.join(root_dir, file_name)
+                file_path_list.append(file_path)
+    return file_path_list
 
-                # Parse the XML file and extract utterances
-                utterances = process_xml_file(file_path, namespace, input_directory)
-
-                # Keep calling combine_quotation_rows until no more replacements are made
-                total_replacements = 0
-                while True:
-                    combined_utterances, _, replacements_made = combine_quotation_rows(utterances)
-                    print(f"Replacements made: {replacements_made}")
-
-                    # Track total replacements across iterations
-                    total_replacements += replacements_made
-
-                    # Stop when no more replacements are made
-                    if replacements_made == 0:
-                        break
-
-                    # Update the utterances list with the combined data
-                    utterances = combined_utterances
-
-                print(f"Total replacements for {file_name}: {total_replacements}")
-
-                # Add the final combined utterances to the global list
-                all_utterances.extend(combined_utterances)
-
-                file_counter += 1
-                if file_counter % 100 == 0:
-                    print(f"\tFinished {file_counter} files")
-
-    # Save the combined utterances to a CSV file
-    save_to_csv(all_utterances, output_path)
-
-
-def process_xml_file(file_path, namespace, input_directory):
+def process_xml_file(file_path, namespace):
     """Process a single XML file and extract utterances as dictionaries."""
-    relative_path = os.path.relpath(file_path, input_directory)
-    transcript = os.path.splitext(relative_path)[0]
 
     # Parse XML
     tree = ET.parse(file_path)
@@ -59,9 +22,9 @@ def process_xml_file(file_path, namespace, input_directory):
     # Extract participants and target child age
     participants = extract_participants(root, namespace)
     target_child_age = extract_target_child_age(root, namespace)
+    utterance_list = extract_utterances(root, namespace)
 
-    # Extract utterances
-    return extract_utterances(root, namespace, participants, transcript, target_child_age)
+    return participants, target_child_age, utterance_list
 
 def extract_participants(root, namespace):
     """Extract participants from the XML."""
@@ -83,15 +46,11 @@ def extract_target_child_age(root, namespace):
         return convert_age_to_days(target_child.get('age'))
     return "unknown"
 
-def extract_utterances(root, namespace, participants, transcript, target_child_age):
+def extract_utterances(root, namespace):
     """Extract utterances and their metadata from the XML."""
-    utterances = []
+    utterance_list = []
     for utterance in root.findall('.//ns:u', namespace):
         speaker_id = utterance.get('who')
-        speaker = participants.get(
-            speaker_id,
-            {'name': 'unknown', 'role': 'unknown', 'age': 'unknown', 'sex': 'unknown', 'language': 'unknown'}
-        )
         words = ' '.join(word.text for word in utterance.findall('.//ns:w', namespace) if word.text)
 
         # Extract <mt> type attribute if available
@@ -110,23 +69,16 @@ def extract_utterances(root, namespace, participants, transcript, target_child_a
         comments = ' | '.join(comment.text for comment in utterance.findall('.//ns:a[@type="comments"]', namespace))
 
         # Create the utterance dictionary
-        utterances.append({
-            "transcript": transcript,
+        utterance_list.append({
             "utterance_text": words,
             "speaker_id": speaker_id,
-            "speaker_name": speaker['name'],
-            "speaker_role": speaker['role'],
-            "speaker_age_months": convert_age_to_days(speaker['age']),
-            "speaker_gender": speaker['sex'],
-            "speaker_language": speaker['language'],
             "start_time_sec": start_time,
             "end_time_sec": end_time,
             "duration_sec": duration,
             "comments_text": comments,
-            "target_child_age": target_child_age,
             "terminator_type": mt_type
         })
-    return utterances
+    return utterance_list
 
 def find_consecutive_cases(utterances):
     """Check for consecutive 'quotation next line' or 'quotation precedes' cases
@@ -177,87 +129,90 @@ def combine_rows(first_row, second_row, template_row):
 
 
 def combine_quotation_rows(utterances):
-    """Combine rows based on the 'terminator_type' column rules."""
-    replacements_made = 0  # Track the number of replacements made
-    combined_data = []  # Store the resulting combined rows
-    combined_row_index_list = []  # Track combined row indices
-    skip_next = False  # Flag to skip the next row
+    total_replacements = 0  # Track total replacements across iterations
 
-    i = 0  # Index to iterate through the utterances
-    while i < len(utterances) - 1:
-        current_row = utterances[i]
-        next_row = utterances[i + 1]
+    while True:
+        """Combine rows based on the 'terminator_type' column rules."""
+        replacements_made = 0  # Track the number of replacements made in this pass
+        combined_data = []  # Store the resulting combined rows
+        combined_row_index_list = []  # Track combined row indices
+        skip_next = False  # Flag to skip the next row
 
-        if skip_next:
-            skip_next = False  # Reset the flag and continue
-            i += 1
-            continue
+        i = 0  # Index to iterate through the utterances
+        while i < len(utterances) - 1:
+            current_row = utterances[i]
+            next_row = utterances[i + 1]
 
-        if current_row["terminator_type"] == "quotation next line":
-            # Handle multiple consecutive "quotation next line"
-            combined_text = current_row["utterance_text"]
-            template_row = next_row
+            if skip_next:
+                skip_next = False  # Reset the flag and continue
+                i += 1
+                continue
 
-            # Merge all consecutive "quotation next line" rows
-            j = i + 1
-            while j < len(utterances) and utterances[j]["terminator_type"] == "quotation next line":
-                combined_text += " " + utterances[j]["utterance_text"]
-                j += 1
+            if current_row["terminator_type"] == "quotation next line":
+                # Handle multiple consecutive "quotation next line"
+                combined_text = current_row["utterance_text"]
+                template_row = next_row
 
-            # Add the non-quotation row's text at the end
-            if j < len(utterances):
-                combined_text += " " + utterances[j]["utterance_text"]
-                template_row = utterances[j]
+                # Merge all consecutive "quotation next line" rows
+                j = i + 1
+                while j < len(utterances) and utterances[j]["terminator_type"] == "quotation next line":
+                    combined_text += " " + utterances[j]["utterance_text"]
+                    j += 1
 
-            # Create the combined row and track it
-            combined_row = template_row.copy()
-            combined_row["utterance_text"] = combined_text
-            combined_data.append(combined_row)
-            combined_row_index_list.append(len(combined_data) - 1)
-            replacements_made += 1
+                # Add the non-quotation row's text at the end
+                if j < len(utterances):
+                    combined_text += " " + utterances[j]["utterance_text"]
+                    template_row = utterances[j]
 
-            # Skip all processed rows
-            i = j
+                # Create the combined row and track it
+                combined_row = template_row.copy()
+                combined_row["utterance_text"] = combined_text
+                combined_data.append(combined_row)
+                combined_row_index_list.append(len(combined_data) - 1)
+                replacements_made += 1
 
-        elif next_row["terminator_type"] == "quotation precedes":
-            # Handle multiple consecutive "quotation precedes"
-            combined_text = current_row["utterance_text"]
+                # Skip all processed rows
+                i = j
 
-            j = i + 1
-            while j < len(utterances) and utterances[j]["terminator_type"] == "quotation precedes":
-                combined_text += " " + utterances[j]["utterance_text"]
-                j += 1
+            elif next_row["terminator_type"] == "quotation precedes":
+                # Handle multiple consecutive "quotation precedes"
+                combined_text = current_row["utterance_text"]
 
-            # Create the combined row and track it
-            combined_row = current_row.copy()
-            combined_row["utterance_text"] = combined_text
-            combined_data.append(combined_row)
-            combined_row_index_list.append(len(combined_data) - 1)
-            replacements_made += 1
+                j = i + 1
+                while j < len(utterances) and utterances[j]["terminator_type"] == "quotation precedes":
+                    combined_text += " " + utterances[j]["utterance_text"]
+                    j += 1
 
-            # Skip all processed rows
-            i = j
+                # Create the combined row and track it
+                combined_row = current_row.copy()
+                combined_row["utterance_text"] = combined_text
+                combined_data.append(combined_row)
+                combined_row_index_list.append(len(combined_data) - 1)
+                replacements_made += 1
 
-        else:
-            # If no combination is needed, add the current row as-is
-            combined_data.append(current_row)
-            i += 1  # Move to the next row
+                # Skip all processed rows
+                i = j
 
-    # Add the last row if it wasn't part of a combination
-    if i == len(utterances) - 1:
-        combined_data.append(utterances[-1])
+            else:
+                # If no combination is needed, add the current row as-is
+                combined_data.append(current_row)
+                i += 1  # Move to the next row
 
-    return combined_data, combined_row_index_list, replacements_made
+        # Add the last row if it wasn't part of a combination
+        if i == len(utterances) - 1:
+            combined_data.append(utterances[-1])
 
+        # Accumulate total replacements
+        total_replacements += replacements_made
 
-'''
-ok. now i want to modify combine_quotation_rows so that it also checks for cases where there are two or more rows in a row containing:
-"terminator_type" == "quotation next line"
-or
-"terminator_type" == "quotation precedes":
+        # If no replacements were made in this iteration, stop
+        if replacements_made == 0:
+            break
 
-In such cases, it should check the value of 
-'''
+    print(f"Total replacements made: {total_replacements}")
+
+    return combined_data, total_replacements
+
 
 def save_to_csv(data, output_path):
     """Save the combined utterances to a CSV file."""
@@ -285,3 +240,20 @@ def convert_age_to_days(age_string):
         return "unknown"  # Return 'unknown' if the format is invalid
 
 
+def get_punctuation(utterance_terminator):
+    punctuation_dict = {'declarative': ".",
+                        "question": "?",
+                        "trail off": ";",
+                        "imperative": "!",
+                        "imperative_emphatic": "!",
+                        "interruption": ":",
+                        "self interruption": ";",
+                        "quotation next line": ";",
+                        "interruption question": "?",
+                        "missing CA terminator": ".",
+                        "broken for coding": ".",
+                        "trail off question": "?",
+                        "quotation precedes": ".",
+                        "self interruption question": "?",
+                        "question exclamation": "?"}
+    return punctuation_dict[utterance_terminator]

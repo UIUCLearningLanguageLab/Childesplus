@@ -4,28 +4,29 @@ import pandas as pd
 import torch
 from collections import Counter
 from torch.utils.data import Dataset
+import document
 
 
 class Corpus(Dataset):
 
-    def __init__(self, document_headers=None):
-        self.document_headers = document_headers
+    def __init__(self):
 
-        self.num_documents = 0  # 3
-        self.document_info_df = None  # index, name, types, tokens
-        self.document_list = None  # list of sequence lists, which are lists of tokens
+        self.num_documents = 0
+        self.document_list = []
 
-        self.num_sequences = None  # 6
-        self.num_types = None  # number of unique tokens in entire corpus
-        self.num_tokens = None
-        self.corpus_freq_dict = None
+        self.num_sequences = 0
+        self.num_tokens = 0
 
+        self.num_types = 0
+        self.type_list = []
+        self.type_index_dict = {}
+        self.type_freq_dict = Counter()
+
+        self.vocab_size = None
         self.vocab_list = None
         self.vocab_index_dict = None
-        self.vocab_size = None  # user specified number of types you want in the vocab
-        self.unknown_token = None  # <unk>
-
-        self.init_corpus()
+        self.vocab_freq_dict = None
+        self.unknown_token = None
 
         self.index_list = None
         self.x_list = None  # the 1D list of indexes
@@ -39,65 +40,25 @@ class Corpus(Dataset):
         output_data = torch.tensor(self.y_list[idx], dtype=torch.long)
         return input_data, output_data
 
-    def init_corpus(self):
-        self.document_list = []
-        header_list = ["name", "num_sequences", "num_types", "num_tokens"]
-        if self.document_headers is not None:
-            header_list += self.document_headers
-        self.document_info_df = pd.DataFrame(columns=header_list)
-        self.num_sequences = 0
-        self.num_types = 0
-        self.num_tokens = 0
-        self.corpus_freq_dict = Counter()
-
-    @staticmethod
-    def get_document_string_from_file(document_path):
-        with open(document_path, 'r', encoding='utf-8') as file:
-            text = file.read()
-        return text
-
-    def add_document(self, sequence_list, tokenized=False, document_info_dict=None):
+    def add_document(self, sequence_list, document_name=None, document_info_dict=None):
         if document_info_dict is None:
             document_info_dict = {}
 
-        # seqeunce_list = [[a11, y, b12, .], [a11, y, b12, .]]
-
-        document_freq_dict = Counter()
-        num_tokens = 0
-        sequence_token_list = []
-        for sequence in sequence_list:
-            if tokenized:
-                token_list = sequence
-            else:
-                token_list = self.tokenize(sequence)
-
-            document_freq_dict.update(token_list)
-            sequence_token_list.append(token_list)
-            num_tokens += len(token_list)
-
-        self.document_list.append(sequence_token_list)
-        self.corpus_freq_dict.update(document_freq_dict)
-
-        if 'name' not in document_info_dict:
-            document_info_dict['name'] = len(document_info_dict)
-
-        num_sequences = len(sequence_list)
-        num_types = len(document_freq_dict)
-        document_info_dict['num_sequences'] = num_sequences
-        document_info_dict['num_types'] = num_types
-        document_info_dict['num_tokens'] = num_tokens
-
-        new_doc_df = pd.DataFrame([document_info_dict])
-
-        self.document_info_df = pd.concat([self.document_info_df, new_doc_df], ignore_index=True)
-        self.num_sequences += num_sequences
-        self.num_tokens += num_tokens
-        self.num_types = len(self.corpus_freq_dict)
+        new_document = document.Document(sequence_list,
+                                         document_name=document_name,
+                                         document_info_dict=document_info_dict)
         self.num_documents += 1
+        self.document_list.append(new_document)
+        self.type_freq_dict += new_document.type_freq_dict
+        self.type_list = list(self.type_freq_dict.keys())
+        self.type_index_dict = {key: idx for idx, key in enumerate(self.type_list)}
+        self.num_types += new_document.num_types
+        self.num_tokens += new_document.num_tokens
+        self.num_sequences += new_document.num_sequences
 
-    def set_unknown_token(self, unknown_token="<unk>"):
+    def set_unknown_token(self, unknown_token="<UNK>"):
         while self.unknown_token is None:
-            if unknown_token in self.corpus_freq_dict:
+            if unknown_token in self.type_freq_dict:
                 unknown_token = "<" + unknown_token + ">"
             else:
                 self.unknown_token = unknown_token
@@ -115,9 +76,9 @@ class Corpus(Dataset):
         # account for the unknown token if it will be included
         if vocab_size is None:
             if include_unknown:
-                vocab_size = len(self.corpus_freq_dict) + 1
+                vocab_size = len(self.type_freq_dict) + 1
             else:
-                vocab_size = len(self.corpus_freq_dict)
+                vocab_size = len(self.type_freq_dict)
 
         # add unknown token to vocab
         if include_unknown:
@@ -125,9 +86,11 @@ class Corpus(Dataset):
             self.add_token_to_vocab(self.unknown_token)
 
         # get a filtered copy of the freq_dict that does not include any excluded words
-        filtered_freq_dict = copy.deepcopy(self.corpus_freq_dict)
-        for token in exclude_list:
-            filtered_freq_dict.pop(token, None)
+        filtered_freq_dict = self.type_freq_dict.copy()
+        if exclude_list:
+            for token in exclude_list:
+                filtered_freq_dict.pop(token, None)  # pop removes safely without checking
+
         if len(filtered_freq_dict) == 0:
             raise ValueError("ERROR making vocab list: After exclusion list there are no words in the corpus")
 
