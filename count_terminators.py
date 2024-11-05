@@ -24,7 +24,6 @@ def print_particular_utterances(utterance_info_list):
             print(utterance)
             print_next_line = False
 
-
 def count_terminator_types(utterance_info_list):
     """
     Counts the frequency of different values in the 'terminator_type' column.
@@ -43,8 +42,6 @@ def print_terminator_counts(counts):
     print("Frequency of terminator types:")
     for terminator, count in counts.items():
         print(f"{terminator}: {count}")
-
-
 
 # Example usage
 csv_file = './data/childes_csv/all_utterances.csv'  # Replace with your CSV file path

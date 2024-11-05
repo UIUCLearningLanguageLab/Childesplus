@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 import csv
 import os
+from copy import deepcopy
 import re
 
 def get_document_file_path_list(input_directory):
@@ -80,33 +81,6 @@ def extract_utterances(root, namespace):
         })
     return utterance_list
 
-def find_consecutive_cases(utterances):
-    """Check for consecutive 'quotation next line' or 'quotation precedes' cases
-    and print them with surrounding context."""
-    consecutive_next_line = []
-    consecutive_precedes = []
-
-    # Loop through the utterances and find consecutive patterns
-    for i in range(len(utterances) - 1):
-        if (utterances[i]["terminator_type"] == "quotation next line" and
-            utterances[i + 1]["terminator_type"] == "quotation next line"):
-            consecutive_next_line.append(i)
-
-        if (utterances[i]["terminator_type"] == "quotation precedes" and
-            utterances[i + 1]["terminator_type"] == "quotation precedes"):
-            consecutive_precedes.append(i)
-
-    # Print the results with context
-    if consecutive_next_line:
-        print("Consecutive 'quotation next line' cases found:")
-        for index in consecutive_next_line:
-            print_with_context(utterances, index, index + 1)
-
-    if consecutive_precedes:
-        print("Consecutive 'quotation precedes' cases found:")
-        for index in consecutive_precedes:
-            print_with_context(utterances, index - 1, index)
-
 def print_with_context(utterances, start_index, end_index):
     """Print the utterances between start and end indices, with context."""
     print(f"\nContext from index {start_index} to {end_index}:")
@@ -114,7 +88,6 @@ def print_with_context(utterances, start_index, end_index):
     # Print each utterance in the specified range
     for i in range(max(0, start_index), min(end_index + 2, len(utterances))):
         print(f"Index {i}: {utterances[i]}")
-
 
 def combine_rows(first_row, second_row, template_row):
     """Combine two rows by keeping all values of 'template_row' except
@@ -127,92 +100,46 @@ def combine_rows(first_row, second_row, template_row):
 
     return combined_row
 
+def combine_quotation_utterances(utterances, direction="forward"):
+    # If backward, reverse the list and change the terminator type condition
+    if direction == "backward":
+        utterances = list(reversed(utterances))
+        terminator_type_to_check = "quotation precedes"
+    else:
+        terminator_type_to_check = "quotation next line"
 
-def combine_quotation_rows(utterances):
-    total_replacements = 0  # Track total replacements across iterations
+    num_utterances = len(utterances)
+    combined_data = []
 
-    while True:
-        """Combine rows based on the 'terminator_type' column rules."""
-        replacements_made = 0  # Track the number of replacements made in this pass
-        combined_data = []  # Store the resulting combined rows
-        combined_row_index_list = []  # Track combined row indices
-        skip_next = False  # Flag to skip the next row
+    i = 0
+    while i < num_utterances:
+        current_utterance = deepcopy(utterances[i])
 
-        i = 0  # Index to iterate through the utterances
-        while i < len(utterances) - 1:
-            current_row = utterances[i]
-            next_row = utterances[i + 1]
+        # Ensure there is a next row to combine with
+        if i < num_utterances - 1:
+            next_utterance = deepcopy(utterances[i + 1])
 
-            if skip_next:
-                skip_next = False  # Reset the flag and continue
-                i += 1
-                continue
+            # Combine current and next utterances based on the terminator type and speaker
+            if current_utterance["terminator_type"] == terminator_type_to_check and current_utterance["speaker_id"] == \
+                    next_utterance["speaker_id"]:
+                combined_text = current_utterance["utterance_text"] + " " + next_utterance["utterance_text"]
+                next_utterance["utterance_text"] = combined_text  # Modify the next utterance
 
-            if current_row["terminator_type"] == "quotation next line":
-                # Handle multiple consecutive "quotation next line"
-                combined_text = current_row["utterance_text"]
-                template_row = next_row
-
-                # Merge all consecutive "quotation next line" rows
-                j = i + 1
-                while j < len(utterances) and utterances[j]["terminator_type"] == "quotation next line":
-                    combined_text += " " + utterances[j]["utterance_text"]
-                    j += 1
-
-                # Add the non-quotation row's text at the end
-                if j < len(utterances):
-                    combined_text += " " + utterances[j]["utterance_text"]
-                    template_row = utterances[j]
-
-                # Create the combined row and track it
-                combined_row = template_row.copy()
-                combined_row["utterance_text"] = combined_text
-                combined_data.append(combined_row)
-                combined_row_index_list.append(len(combined_data) - 1)
-                replacements_made += 1
-
-                # Skip all processed rows
-                i = j
-
-            elif next_row["terminator_type"] == "quotation precedes":
-                # Handle multiple consecutive "quotation precedes"
-                combined_text = current_row["utterance_text"]
-
-                j = i + 1
-                while j < len(utterances) and utterances[j]["terminator_type"] == "quotation precedes":
-                    combined_text += " " + utterances[j]["utterance_text"]
-                    j += 1
-
-                # Create the combined row and track it
-                combined_row = current_row.copy()
-                combined_row["utterance_text"] = combined_text
-                combined_data.append(combined_row)
-                combined_row_index_list.append(len(combined_data) - 1)
-                replacements_made += 1
-
-                # Skip all processed rows
-                i = j
-
+                # Skip appending the current utterance as it has been combined
+                i += 1  # Move to the next pair of utterances
             else:
-                # If no combination is needed, add the current row as-is
-                combined_data.append(current_row)
-                i += 1  # Move to the next row
+                combined_data.append(current_utterance)
+        else:
+            # If it's the last row, just append it as-is
+            combined_data.append(current_utterance)
 
-        # Add the last row if it wasn't part of a combination
-        if i == len(utterances) - 1:
-            combined_data.append(utterances[-1])
+        i += 1  # Move to the next utterance (or skip if combined)
 
-        # Accumulate total replacements
-        total_replacements += replacements_made
+    # If we processed in reverse, reverse the combined data back
+    if direction == "backward":
+        combined_data = list(reversed(combined_data))
 
-        # If no replacements were made in this iteration, stop
-        if replacements_made == 0:
-            break
-
-    print(f"Total replacements made: {total_replacements}")
-
-    return combined_data, total_replacements
-
+    return combined_data
 
 def save_to_csv(data, output_path):
     """Save the combined utterances to a CSV file."""
@@ -242,7 +169,7 @@ def convert_age_to_days(age_string):
 
 def get_punctuation(utterance_terminator):
     punctuation_dict = {'declarative': ".",
-                        "question": "?",
+                        "q": "?",
                         "trail off": ";",
                         "imperative": "!",
                         "imperative_emphatic": "!",
@@ -255,5 +182,9 @@ def get_punctuation(utterance_terminator):
                         "trail off question": "?",
                         "quotation precedes": ".",
                         "self interruption question": "?",
-                        "question exclamation": "?"}
+                        "question exclamation": "?",
+                        "None": ".",
+                        "p": ".",
+                        "question": "?",
+                        "e": "!"}
     return punctuation_dict[utterance_terminator]
